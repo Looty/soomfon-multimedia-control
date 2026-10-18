@@ -1,0 +1,10 @@
+{
+  "name": "soomfon-multimedia-control-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StreamDock plugin backend: per-application media control (play/pause/previous/next) via Windows media sessions, bindable to the knob or a key.",
+  "main": "index.js",
+  "dependencies": {
+    "ws": "^8.21.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Actions": [
+    {
+      "Icon": "images/icon",
+      "Name": "App Multimedia",
+      "States": [
+        { "Image": "images/icon" }
+      ],
+      "Settings": {
+        "processMode": "foreground",
+        "processName": "",
+        "keyOperation": "playpause",
+        "showFlyout": true
+      },
+      "Controllers": ["Keypad", "Knob"],
+      "DisableAutomaticStates": true,
+      "UserTitleEnabled": true,
+      "SupportedInMultiActions": true,
+      "Tooltip": "Play/pause, previous and next for ONE chosen app (Windows media sessions, not global media keys). Knob: rotate = previous/next, press = play/pause.",
+      "UUID": "com.soomfonmultimedia.mediacontrol",
+      "PropertyInspectorPath": "propertyInspector/index.html"
+    }
+  ],
+  "SDKVersion": 1,
+  "Author": "soomfon-multimedia-control contributors",
+  "Name": "App Multimedia",
+  "Icon": "images/icon",
+  "CategoryIcon": "images/icon",
+  "Category": "App Multimedia",
+  "Description": "Per-application media control (play/pause/previous/next) bindable to the knob or a key.",
+  "CodePathWin": "plugin/index.js",
+  "Nodejs": { "Version": "20" },
+  "Version": "1.0.0",
+  "OS": [
+    { "Platform": "windows", "MinimumVersion": "10" }
+  ],
+  "Software": { "MinimumVersion": "2.9" }
+}

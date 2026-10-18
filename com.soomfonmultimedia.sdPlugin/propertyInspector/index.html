@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>App Multimedia - Property Inspector</title>
+</head>
+
+<body>
+    <div class="sdpi-wrapper">
+        <div class="row">
+            <label for="processMode">App</label>
+            <select id="processMode">
+                <option value="foreground">Foreground (Active)</option>
+                <option value="byname">By Name</option>
+            </select>
+        </div>
+
+        <div class="row" id="processNameRow">
+            <label for="processNameSelect">App name</label>
+            <select id="processNameSelect">
+                <option value="">Loading media apps...</option>
+            </select>
+            <input type="text" id="processName" placeholder="e.g. Spotify.exe" style="display:none;margin-top:4px;" />
+            <div class="hint" id="processNameHint" style="display:none;">
+                Not currently listed -- type the exact media-session id. It'll
+                match automatically once the app starts playing.
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="keyOperation">Key press operation</label>
+            <select id="keyOperation">
+                <option value="playpause">Play/Pause</option>
+                <option value="previous">Previous</option>
+                <option value="next">Next</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label><input type="checkbox" id="showFlyout" /> Show Windows media popup</label>
+            <div class="hint">
+                Sends a volume-down/up key pair (net zero change) after each command so
+                Windows shows its media flyout. Uncheck to avoid any volume blip.
+            </div>
+        </div>
+
+        <div class="row hint">
+            Knob: rotate clockwise = next, counter-clockwise = previous, press =
+            play/pause. The "Key press operation" applies when this action sits
+            on a regular button. Only apps that currently have a media session
+            (e.g. started playing something) appear in the list.
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background-color: #2a2a2a;
+        color: #fff;
+        margin: 0;
+        padding: 8px;
+    }
+
+    .row {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    label {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+    select,
+    input[type="text"] {
+        background-color: #3a3a3a;
+        border: 1px solid #4a4a4a;
+        color: #fff;
+        border-radius: 4px;
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .hint {
+        font-size: 11px;
+        color: #999;
+        line-height: 1.4;
+    }
+</style>
+
+</html>
